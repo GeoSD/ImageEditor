@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-B6-17E">
+                                <rect key="frame" x="15" y="35" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dkh-B6-17E" secondAttribute="height" multiplier="1:1" id="bXN-V4-x1i"/>
+                                    <constraint firstAttribute="width" constant="160" id="tSE-lI-R20"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FOY-kv-qFP" appends="YES" id="3rL-dr-dQ7"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yH-sv-HJl">
+                                <rect key="frame" x="210" y="35" width="45" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Rotate"/>
+                                <connections>
+                                    <action selector="rotateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYs-I0-TFk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-Hh-z7Q">
+                                <rect key="frame" x="210" y="100" width="88" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Invert Colors"/>
+                                <connections>
+                                    <action selector="invertColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6x8-dc-uGU"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tmb-hm-aRl">
+                                <rect key="frame" x="15" y="263" width="290" height="290"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tmb-hm-aRl" secondAttribute="height" multiplier="1:1" id="p7a-YL-ZEl"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oJC-xe-LKp" appends="YES" id="49a-jH-rpa"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE5-mU-wZw">
+                                <rect key="frame" x="210" y="160" width="88" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Mirror Image"/>
+                                <connections>
+                                    <action selector="mirrorImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O4-tW-LWx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-HB-5zw">
+                                <rect key="frame" x="50.5" y="100" width="89" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="selectImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PhT-4z-eDg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PE5-mU-wZw" firstAttribute="top" secondItem="TxL-Hh-z7Q" secondAttribute="bottom" constant="30" id="6qX-J7-cYS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PE5-mU-wZw" secondAttribute="trailing" constant="20" symbolic="YES" id="Awf-jZ-tE1"/>
+                            <constraint firstItem="5yH-sv-HJl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="BGp-l6-VuS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tmb-hm-aRl" secondAttribute="bottom" constant="15" id="Dto-Vm-e3W"/>
+                            <constraint firstItem="tmb-hm-aRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="JdF-XQ-ANt"/>
+                            <constraint firstItem="5yH-sv-HJl" firstAttribute="leading" secondItem="dkh-B6-17E" secondAttribute="trailing" constant="35" id="K2s-cJ-ooe"/>
+                            <constraint firstItem="mnr-HB-5zw" firstAttribute="centerX" secondItem="dkh-B6-17E" secondAttribute="centerX" id="PIm-PX-7UN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TxL-Hh-z7Q" secondAttribute="trailing" constant="20" symbolic="YES" id="PQT-gp-h5y"/>
+                            <constraint firstItem="PE5-mU-wZw" firstAttribute="leading" secondItem="dkh-B6-17E" secondAttribute="trailing" constant="35" id="QjD-ko-kIF"/>
+                            <constraint firstItem="tmb-hm-aRl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fg0-lH-Rwd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmb-hm-aRl" secondAttribute="trailing" constant="15" id="nxR-L9-n91"/>
+                            <constraint firstItem="TxL-Hh-z7Q" firstAttribute="top" secondItem="5yH-sv-HJl" secondAttribute="bottom" constant="35" id="s6z-hS-8MD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5yH-sv-HJl" secondAttribute="trailing" constant="20" symbolic="YES" id="spO-uz-W2J"/>
+                            <constraint firstItem="TxL-Hh-z7Q" firstAttribute="leading" secondItem="dkh-B6-17E" secondAttribute="trailing" constant="35" id="stw-sy-Ecl"/>
+                            <constraint firstItem="mnr-HB-5zw" firstAttribute="centerY" secondItem="dkh-B6-17E" secondAttribute="centerY" id="vmy-qL-F9E"/>
+                            <constraint firstItem="dkh-B6-17E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wfE-OT-vaF"/>
+                            <constraint firstItem="dkh-B6-17E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="xYu-lC-KzX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="invertColorsButton" destination="TxL-Hh-z7Q" id="jMu-hh-ekK"/>
+                        <outlet property="loadImageButton" destination="mnr-HB-5zw" id="hPz-xi-OYU"/>
+                        <outlet property="mirrorImageButton" destination="PE5-mU-wZw" id="nmj-s9-au2"/>
+                        <outlet property="originalImage" destination="dkh-B6-17E" id="Vav-70-87c"/>
+                        <outlet property="originalImageTap" destination="FOY-kv-qFP" id="byA-yr-jwc"/>
+                        <outlet property="resultImage" destination="tmb-hm-aRl" id="XJO-gj-0Ww"/>
+                        <outlet property="resultImageTap" destination="oJC-xe-LKp" id="MYj-Px-7uf"/>
+                        <outlet property="rotateButton" destination="5yH-sv-HJl" id="L6M-Il-vuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oJC-xe-LKp">
+                    <connections>
+                        <action selector="resultImageTapped:" destination="BYZ-38-t0r" id="T1f-IO-cLm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FOY-kv-qFP">
+                    <connections>
+                        <action selector="originalImageTapped:" destination="BYZ-38-t0r" id="H3F-uQ-Skj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="117.25352112676056"/>
+        </scene>
+    </scenes>
+</document>
